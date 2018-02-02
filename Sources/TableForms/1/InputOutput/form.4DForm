@@ -204,7 +204,7 @@
 					"selectionMode": "multiple",
 					"printFrame": "variable",
 					"method": "ObjectMethods/SearchPicker.4dm",
-					"events": []
+					"events": ["onLoad","onDataChange"]
 				},
 				"TitleField": {
 					"type": "input",
