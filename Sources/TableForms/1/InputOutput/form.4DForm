@@ -1,0 +1,464 @@
+﻿{
+	"windowMinWidth": 920,
+	"windowMinHeight": 620,
+	"windowMaxWidth": 32000,
+	"windowMaxHeight": 32000,
+	"width": 920,
+	"height": 620,
+	"markerBody": 600,
+	"markerBreak": 600,
+	"markerFooter": 600,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onDataChange",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onSelectionChange",
+		"onLoadRecord",
+		"onAfterEdit"
+	],
+	"method": "method.4dm",
+	"pages": [
+		{
+			"objects": {
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 920,
+					"height": 90,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Gradient10.png"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 89,
+					"left": 0,
+					"width": 920,
+					"height": 1,
+					"sizingX": "grow",
+					"fill": "#888888",
+					"stroke": "transparent"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 20,
+					"left": 20,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Books.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Status": {
+					"type": "input",
+					"top": 551,
+					"left": 570,
+					"width": 203,
+					"height": 49,
+					"sizingY": "move",
+					"dataSource": "<>bookStatus",
+					"fill": "transparent",
+					"textAlign": "left",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": []
+				},
+				"btnAdd": {
+					"type": "button",
+					"top": 20,
+					"left": 230,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Add Record",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Add",
+					"icon": "/RESOURCES/Pictures/Buttons/NewRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnAdd.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnDelete": {
+					"type": "button",
+					"top": 20,
+					"left": 290,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Delete Selection",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Delete",
+					"icon": "/RESOURCES/Pictures/Buttons/DeleteRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnDelete.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnShowAll": {
+					"type": "button",
+					"top": 20,
+					"left": 100,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Show All",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Show all",
+					"icon": "/RESOURCES/Pictures/Buttons/AllRecords.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnShowAll.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnPrint": {
+					"type": "button",
+					"top": 20,
+					"left": 360,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Print Selection",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Print",
+					"icon": "/RESOURCES/Pictures/Buttons/Print.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnPrint.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnShowSubset": {
+					"type": "button",
+					"top": 20,
+					"left": 160,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Show Subset",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Subset",
+					"icon": "/RESOURCES/Pictures/Buttons/ShowSubset.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnShowSubset.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 309,
+					"left": 500,
+					"width": 84,
+					"height": 17,
+					"stroke": "#696969",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Information"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 230,
+					"left": 500,
+					"width": 60,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "By"
+				},
+				"SearchPicker": {
+					"type": "subform",
+					"top": 30,
+					"left": 695,
+					"width": 205,
+					"height": 30,
+					"sizingX": "move",
+					"dataSource": "vSearch",
+					"dataSourceTypeHint": "text",
+					"detailForm": "SearchPicker",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/SearchPicker.4dm",
+					"events": []
+				},
+				"TitleField": {
+					"type": "input",
+					"top": 135,
+					"left": 500,
+					"width": 260,
+					"height": 71,
+					"sizingX": "grow",
+					"dataSource": "[Books:1]title:2",
+					"dataSourceTypeHint": "undefined",
+					"fill": "transparent",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 20,
+					"fontWeight": "bold",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"placeholder": "Title",
+					"method": "ObjectMethods/TitleField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"AuthorField": {
+					"type": "input",
+					"top": 255,
+					"left": 500,
+					"width": 260,
+					"height": 17,
+					"sizingX": "grow",
+					"dataSource": "[Books:1]author:6",
+					"dataSourceTypeHint": "undefined",
+					"fill": "transparent",
+					"fontWeight": "bold",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"placeholder": "Author",
+					"method": "ObjectMethods/AuthorField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DescriptionField": {
+					"type": "input",
+					"top": 334,
+					"left": 500,
+					"width": 400,
+					"height": 113,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Books:1]description:3",
+					"dataSourceTypeHint": "undefined",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true,
+					"spellcheck": true,
+					"contextMenu": "none",
+					"placeholder": "Enter a comment here…",
+					"events": []
+				},
+				"listBoxBooks": {
+					"type": "listbox",
+					"top": 110,
+					"left": 20,
+					"width": 460,
+					"height": 490,
+					"sizingY": "grow",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "27px",
+					"headerHeight": "2em",
+					"highlightSet": "$highlightedBooks",
+					"table": 1,
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"fill": "#FFFFFF",
+					"verticalAlign": "middle",
+					"method": "ObjectMethods/listBoxBooks.4dm",
+					"events": [
+						"onClick",
+						"onGettingFocus",
+						"onUnload",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[Books:1]title:2",
+							"dataSourceTypeHint": "text",
+							"automaticInsertion": true,
+							"width": 200,
+							"minWidth": 200,
+							"maxWidth": 32000,
+							"enterable": false,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"events": [
+								"onHeaderClick"
+							],
+							"header": {
+								"name": "headTitle",
+								"text": "Title",
+								"dataSource": "<>headTitle",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Books:1]author:6",
+							"dataSourceTypeHint": "text",
+							"automaticInsertion": true,
+							"width": 266,
+							"minWidth": 200,
+							"maxWidth": 32000,
+							"enterable": false,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"events": [],
+							"header": {
+								"name": "headAuthor",
+								"text": "Author",
+								"dataSource": "<>headAuthor",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						}
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 110,
+					"left": 500,
+					"width": 60,
+					"height": 17,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Title"
+				},
+				"BtnEditSave": {
+					"type": "button",
+					"top": 560,
+					"left": 780,
+					"width": 120,
+					"height": 40,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Edit",
+					"icon": "/RESOURCES/Pictures/Buttons/EditRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/BtnEditSave.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Pict_Available": {
+					"type": "picture",
+					"top": 550,
+					"left": 500,
+					"width": 50,
+					"height": 50,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "Images/Pict_Available.png"
+				},
+				"Pict_Unavailable": {
+					"type": "picture",
+					"top": 550,
+					"left": 500,
+					"width": 50,
+					"height": 50,
+					"visibility": "hidden",
+					"sizingY": "move",
+					"pictureFormat": "scaled",
+					"picture": "Images/Pict_Unavailable.png"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 20,
+					"left": 225,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 20,
+					"left": 355,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"BtnCancel": {
+					"type": "button",
+					"top": 560,
+					"left": 640,
+					"width": 120,
+					"height": 40,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Cancel",
+					"icon": "/RESOURCES/Pictures/Buttons/Cancel.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/BtnCancel.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"PhotoField": {
+					"type": "input",
+					"top": 110,
+					"left": 780,
+					"width": 120,
+					"height": 180,
+					"sizingX": "move",
+					"dataSource": "[Books:1]photo:4",
+					"dataSourceTypeHint": "undefined",
+					"fill": "transparent",
+					"stroke": "#000000",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/PhotoField.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 20,
+					"left": 95,
+					"height": 60,
+					"stroke": "#999999"
+				}
+			}
+		}
+	]
+}

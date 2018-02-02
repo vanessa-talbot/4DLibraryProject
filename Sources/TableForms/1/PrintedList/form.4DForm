@@ -1,0 +1,245 @@
+﻿{
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 64,
+	"markerBody": 85,
+	"markerBreak": 116,
+	"markerFooter": 116,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pages": [
+		null,
+		{
+			"objects": {
+				"vDate": {
+					"type": "input",
+					"top": 12,
+					"left": 443,
+					"width": 100,
+					"height": 16,
+					"dataSource": "vDate",
+					"fill": "transparent",
+					"stroke": "#000000",
+					"textAlign": "center",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vDate.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak"
+					]
+				},
+				"vPageNum_t": {
+					"type": "input",
+					"top": 100,
+					"left": 240,
+					"width": 100,
+					"height": 15,
+					"sizingX": "move",
+					"dataSource": "vPageNum_t",
+					"fill": "transparent",
+					"stroke": "#000000",
+					"textAlign": "center",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"method": "ObjectMethods/vPageNum_t.4dm",
+					"events": [
+						"onLoad",
+						"onHeader",
+						"onPrintingBreak"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 12,
+					"left": 8,
+					"width": 115,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "BOOKS"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 62,
+					"left": 2,
+					"width": 556,
+					"sizingX": "grow"
+				},
+				"Splitter1_Line2": {
+					"type": "line",
+					"top": 43,
+					"left": 236,
+					"height": 44,
+					"stroke": "#AAAAAA"
+				},
+				"Splitter2_Line2": {
+					"type": "line",
+					"top": 43,
+					"left": 461,
+					"height": 44,
+					"stroke": "#AAAAAA"
+				},
+				"Rectangle8": {
+					"type": "rectangle",
+					"top": 38,
+					"left": 0,
+					"width": 560,
+					"height": 50,
+					"sizingX": "grow"
+				},
+				"Line9": {
+					"type": "line",
+					"top": 84,
+					"left": 2,
+					"width": 555,
+					"sizingX": "grow",
+					"stroke": "#AAAAAA"
+				},
+				"S1_Text": {
+					"type": "text",
+					"top": 43,
+					"left": 5,
+					"width": 229,
+					"height": 17,
+					"sizingX": "grow",
+					"stroke": "automatic",
+					"fontWeight": "bold",
+					"text": "author"
+				},
+				"S2_Text": {
+					"type": "text",
+					"top": 43,
+					"left": 240,
+					"width": 219,
+					"height": 17,
+					"sizingX": "grow",
+					"stroke": "automatic",
+					"fontWeight": "bold",
+					"text": "title"
+				},
+				"S3_Text": {
+					"type": "text",
+					"top": 43,
+					"left": 465,
+					"width": 91,
+					"height": 17,
+					"sizingX": "grow",
+					"stroke": "automatic",
+					"text": "purchaseDate"
+				},
+				"S1_Field": {
+					"type": "input",
+					"top": 66,
+					"left": 5,
+					"width": 229,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Books:1]author:6",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S2_Field": {
+					"type": "input",
+					"top": 66,
+					"left": 240,
+					"width": 219,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Books:1]title:2",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"S3_Field": {
+					"type": "input",
+					"top": 66,
+					"left": 465,
+					"width": 91,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "[Books:1]purchaseDate:5",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dateFormat": "short",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	]
+}

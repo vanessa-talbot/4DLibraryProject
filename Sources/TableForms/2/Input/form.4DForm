@@ -1,0 +1,347 @@
+﻿{
+	"windowMinWidth": 480,
+	"width": 480,
+	"height": 300,
+	"markerBody": 162,
+	"markerBreak": 162,
+	"markerFooter": 172,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pages": [
+		{
+			"objects": {
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 480,
+					"height": 90,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Gradient10.png"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 89,
+					"left": 0,
+					"width": 480,
+					"height": 1,
+					"sizingX": "grow",
+					"fill": "#888888",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text4": {
+					"type": "text",
+					"top": 116,
+					"left": 27,
+					"width": 165,
+					"height": 17,
+					"stroke": "#696969",
+					"textAlign": "right",
+					"text": "<?[2]1>: "
+				},
+				"Text1": {
+					"type": "text",
+					"top": 147,
+					"left": 27,
+					"width": 165,
+					"height": 17,
+					"stroke": "#696969",
+					"textAlign": "right",
+					"text": "<?[2]2>:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 177,
+					"left": 27,
+					"width": 165,
+					"height": 17,
+					"stroke": "#696969",
+					"textAlign": "right",
+					"text": "<?[2]3>:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 207,
+					"left": 27,
+					"width": 165,
+					"height": 17,
+					"stroke": "#696969",
+					"textAlign": "right",
+					"text": "<?[2]4>:"
+				},
+				"BookID": {
+					"type": "input",
+					"top": 116,
+					"left": 197,
+					"width": 56,
+					"height": 17,
+					"dataSource": "[Loans:2]book_Id:1",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"stroke": "#000000",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"StudentID": {
+					"type": "input",
+					"top": 147,
+					"left": 197,
+					"width": 56,
+					"height": 17,
+					"dataSource": "[Loans:2]student_Id:2",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"stroke": "#000000",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"BorrowDate": {
+					"type": "input",
+					"top": 177,
+					"left": 197,
+					"width": 96,
+					"height": 17,
+					"dataSource": "[Loans:2]borrowDate:3",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"stroke": "#000000",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"ReturnDate": {
+					"type": "input",
+					"top": 207,
+					"left": 197,
+					"width": 96,
+					"height": 17,
+					"dataSource": "[Loans:2]returnDate:4",
+					"dataSourceTypeHint": "undefined",
+					"fill": "#FFFFFF",
+					"stroke": "#000000",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 20,
+					"left": 20,
+					"width": 60,
+					"height": 60,
+					"tooltip": "First Record",
+					"action": "firstRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "First",
+					"icon": "/RESOURCES/Pictures/Buttons/FirstRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 20,
+					"left": 80,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Previous Record",
+					"action": "previousRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Previous",
+					"icon": "/RESOURCES/Pictures/Buttons/PreviousRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 20,
+					"left": 140,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Next Record",
+					"action": "nextRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Next",
+					"icon": "/RESOURCES/Pictures/Buttons/NextRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 20,
+					"left": 200,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Last Record",
+					"action": "lastRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Last",
+					"icon": "/RESOURCES/Pictures/Buttons/LastRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDelete": {
+					"type": "button",
+					"top": 20,
+					"left": 270,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Delete Record",
+					"action": "deleteRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Delete",
+					"icon": "/RESOURCES/Pictures/Buttons/DeleteRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 20,
+					"left": 340,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Cancel",
+					"action": "cancel",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Cancel",
+					"icon": "/RESOURCES/Pictures/Buttons/Cancel.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 20,
+					"left": 400,
+					"width": 60,
+					"height": 60,
+					"tooltip": "OK",
+					"action": "accept",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Validate",
+					"icon": "/RESOURCES/Pictures/Buttons/Validate.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line3": {
+					"type": "line",
+					"top": 20,
+					"left": 335,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 20,
+					"left": 265,
+					"height": 60,
+					"stroke": "#999999"
+				}
+			}
+		}
+	]
+}

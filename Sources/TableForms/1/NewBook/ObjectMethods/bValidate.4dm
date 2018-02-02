@@ -1,0 +1,1 @@
+[Books:1]photo:4:=Tool_BuildBookPicture ([Books:1]author:6;[Books:1]title:2)

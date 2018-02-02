@@ -1,0 +1,628 @@
+﻿{
+	"memorizeGeometry": true,
+	"windowMinWidth": 720,
+	"windowMinHeight": 620,
+	"width": 720,
+	"height": 620,
+	"markerBody": 306,
+	"markerBreak": 306,
+	"markerFooter": 316,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pages": [
+		{
+			"objects": {
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 720,
+					"height": 90,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Gradient10.png"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 89,
+					"left": 0,
+					"width": 720,
+					"height": 1,
+					"sizingX": "grow",
+					"fill": "#888888",
+					"stroke": "transparent"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 20,
+					"left": 20,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Students.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text2": {
+					"type": "text",
+					"top": 365,
+					"left": 20,
+					"width": 108,
+					"height": 17,
+					"sizingY": "grow",
+					"stroke": "#808080",
+					"fontWeight": "bold",
+					"text": "Borrowed Books"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 110,
+					"left": 20,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Lastname"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 216,
+					"left": 20,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Address"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 110,
+					"left": 360,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Grade"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 160,
+					"left": 360,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Primary teacher"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 216,
+					"left": 360,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Telephone"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 272,
+					"left": 360,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Email"
+				},
+				"LastName": {
+					"type": "input",
+					"top": 130,
+					"left": 20,
+					"width": 300,
+					"height": 17,
+					"dataSource": "[Students:3]lastName:2",
+					"dataSourceTypeHint": "undefined",
+					"fontWeight": "bold",
+					"contextMenu": "none",
+					"placeholder": "Last Name",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Grade": {
+					"type": "dropdown",
+					"top": 128,
+					"left": 360,
+					"width": 300,
+					"height": 20,
+					"dataSource": "[Students:3]grade:8",
+					"dataSourceTypeHint": "undefined",
+					"focusable": false,
+					"saveAs": "value",
+					"choiceList": {
+						"$ref": "/SOURCES/lists.json#/Grade"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"First Name": {
+					"type": "input",
+					"top": 180,
+					"left": 20,
+					"width": 300,
+					"height": 16,
+					"dataSource": "[Students:3]firstName:3",
+					"dataSourceTypeHint": "undefined",
+					"fontWeight": "bold",
+					"contextMenu": "none",
+					"placeholder": "First Name",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Primary Teacher": {
+					"type": "input",
+					"top": 180,
+					"left": 360,
+					"width": 300,
+					"height": 16,
+					"dataSource": "[Students:3]primaryTeacher:9",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Address1": {
+					"type": "input",
+					"top": 237,
+					"left": 20,
+					"width": 300,
+					"height": 32,
+					"dataSource": "[Students:3]address:4",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"multiline": "yes",
+					"placeholder": "Address 1",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Telephone": {
+					"type": "input",
+					"top": 237,
+					"left": 360,
+					"width": 300,
+					"height": 16,
+					"dataSource": "[Students:3]telephone:10",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"placeholder": "Home",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"City": {
+					"type": "input",
+					"top": 292,
+					"left": 20,
+					"width": 164,
+					"height": 16,
+					"dataSource": "[Students:3]city:7",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"placeholder": "City",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Zip Code": {
+					"type": "input",
+					"top": 292,
+					"left": 195,
+					"width": 125,
+					"height": 17,
+					"dataSource": "[Students:3]zipCode:6",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"placeholder": "Zip code",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"Email": {
+					"type": "input",
+					"top": 292,
+					"left": 360,
+					"width": 300,
+					"height": 16,
+					"dataSource": "[Students:3]email:11",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"tooltip": "Email",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"listBoxLoans": {
+					"type": "listbox",
+					"top": 393,
+					"left": 20,
+					"width": 560,
+					"height": 203,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "2em",
+					"headerHeight": "2em",
+					"highlightSet": "$highlightedLoans",
+					"table": 2,
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"fill": "#FFFFFF",
+					"verticalAlign": "middle",
+					"method": "ObjectMethods/listBoxLoans.4dm",
+					"events": [
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[Books:1]title:2+\" (\"+[Books:1]author:6+\")\"",
+							"automaticInsertion": true,
+							"width": 285,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"events": [],
+							"header": {
+								"name": "Header1",
+								"text": "Book",
+								"dataSource": "Header1",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Loans:2]borrowDate:3",
+							"dataSourceTypeHint": "date",
+							"automaticInsertion": true,
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"events": [],
+							"header": {
+								"name": "Header2",
+								"text": "Borrow date",
+								"dataSource": "Header2",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Loans:2]returnDate:4",
+							"dataSourceTypeHint": "date",
+							"automaticInsertion": true,
+							"width": 140,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"events": [],
+							"header": {
+								"name": "Header3",
+								"text": "Return date",
+								"dataSource": "Header3",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						}
+					]
+				},
+				"bDeleteLoan": {
+					"type": "button",
+					"top": 443,
+					"left": 590,
+					"width": 100,
+					"height": 50,
+					"sizingX": "move",
+					"text": "Return",
+					"icon": "/RESOURCES/Pictures/Buttons/DeleteRecords.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "custom",
+					"method": "ObjectMethods/bDeleteLoan.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bAddLoan": {
+					"type": "button",
+					"top": 393,
+					"left": 590,
+					"width": 100,
+					"height": 50,
+					"sizingX": "move",
+					"text": "Borrow",
+					"icon": "/RESOURCES/Pictures/Buttons/NewRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "right",
+					"style": "custom",
+					"method": "ObjectMethods/bAddLoan.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"bFirst": {
+					"type": "button",
+					"top": 20,
+					"left": 105,
+					"width": 60,
+					"height": 60,
+					"tooltip": "First Record",
+					"action": "firstRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "First",
+					"icon": "/RESOURCES/Pictures/Buttons/FirstRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bPrevious": {
+					"type": "button",
+					"top": 20,
+					"left": 165,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Previous Record",
+					"action": "previousRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Previous",
+					"icon": "/RESOURCES/Pictures/Buttons/PreviousRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bNext": {
+					"type": "button",
+					"top": 20,
+					"left": 225,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Next Record",
+					"action": "nextRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Next",
+					"icon": "/RESOURCES/Pictures/Buttons/NextRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bLast": {
+					"type": "button",
+					"top": 20,
+					"left": 285,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Last Record",
+					"action": "lastRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Last",
+					"icon": "/RESOURCES/Pictures/Buttons/LastRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bDelete": {
+					"type": "button",
+					"top": 20,
+					"left": 365,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Delete Record",
+					"action": "deleteRecord",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Delete",
+					"icon": "/RESOURCES/Pictures/Buttons/DeleteRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 20,
+					"left": 435,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Cancel",
+					"action": "cancel",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Cancel",
+					"icon": "/RESOURCES/Pictures/Buttons/Cancel.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 20,
+					"left": 495,
+					"width": 60,
+					"height": 60,
+					"tooltip": "OK",
+					"action": "accept",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Validate",
+					"icon": "/RESOURCES/Pictures/Buttons/Validate.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 20,
+					"left": 95,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Line2": {
+					"type": "line",
+					"top": 20,
+					"left": 360,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 20,
+					"left": 430,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 338,
+					"left": 20,
+					"width": 680,
+					"height": 1,
+					"sizingX": "grow",
+					"fill": "#888888",
+					"stroke": "transparent"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 160,
+					"left": 20,
+					"width": 120,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Firstname"
+				}
+			}
+		}
+	]
+}

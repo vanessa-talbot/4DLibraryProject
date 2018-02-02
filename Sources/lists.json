@@ -1,0 +1,29 @@
+﻿{
+	"Grade": {
+		"lineHeight": 18,
+		"editable": true,
+		"customDataInteger": 0,
+		"items": [
+			{
+				"text": "9th",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "10th",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "11th",
+				"ref": 3,
+				"editable": true
+			},
+			{
+				"text": "12th",
+				"ref": 4,
+				"editable": true
+			}
+		]
+	}
+}

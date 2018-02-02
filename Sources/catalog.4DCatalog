@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="4D Library" uuid="9C6FE4A963C346C9B97DB079997D5EED" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Books" uuid="443EFB4810B94F3A9B955383AD096A90" id="1" leave_tag_on_delete="true" prevent_journaling="true">
+		<field name="id" uuid="A48D32A27EC24915962F4F3CC8EDADC1" type="4" unique="true" autosequence="true" never_null="true" id="1">
+			<field_extra modifiable="false">
+				<editor_field_info>
+					<color red="102" green="7" blue="165" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="title" uuid="1E67EEF3E3E54C2E9AFDA88729F6E0D6" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="description" uuid="F9AA1EDDACE8498BBCC53C5951A7BBBB" type="10" never_null="true" id="3"/>
+		<field name="photo" uuid="62E9F8C9388341BFA0399A82B55451D1" type="12" never_null="true" id="4"/>
+		<field name="purchaseDate" uuid="623FAA27985D46B8B9BBF6E49285AFAE" type="8" never_null="true" id="5"/>
+		<field name="author" uuid="DFBBC88656DB456EA19F546E8367DEFB" type="10" limiting_length="255" never_null="true" id="6"/>
+		<primary_key field_name="id" field_uuid="A48D32A27EC24915962F4F3CC8EDADC1"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="209" green="192" blue="222" alpha="255"/>
+				<coordinates left="0" top="0" width="146" height="215"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Loans" uuid="AE032C75F3C340E1A1C2CA8011987C83" id="2" leave_tag_on_delete="true" prevent_journaling="true">
+		<field name="book_Id" uuid="E978AD0F9BE84E9697D6F1D87032AA87" type="4" never_null="true" id="1">
+			<field_extra position="2">
+				<editor_field_info>
+					<color red="102" green="7" blue="165" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="student_Id" uuid="512A0122B34149D582A593ABBD583B85" type="4" never_null="true" id="2">
+			<field_extra position="3">
+				<editor_field_info>
+					<color red="0" green="81" blue="186" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="borrowDate" uuid="57EC8292776B4F05909944F13964833B" type="8" never_null="true" id="3">
+			<field_extra position="4"/>
+		</field>
+		<field name="returnDate" uuid="4A24EA1267074D40B58DC5903DB3C021" type="8" never_null="true" id="4">
+			<field_extra position="5"/>
+		</field>
+		<field name="id" uuid="193E70B6338244538F80110F13B6342F" type="4" unique="true" autosequence="true" never_null="true" id="5">
+			<field_extra position="1"/>
+		</field>
+		<primary_key field_name="id" field_uuid="193E70B6338244538F80110F13B6342F"/>
+		<table_extra>
+			<editor_table_info fields_ordering="2" displayable_fields_count="7">
+				<color red="223" green="210" blue="195" alpha="255"/>
+				<coordinates left="215.1953125" top="0" width="144.87890625" height="200.6953125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Students" uuid="5AA1916591384A999BC83C3973FF54AE" id="3" leave_tag_on_delete="true" prevent_journaling="true">
+		<field name="id" uuid="AC85F6A3EEE8403FA225E65703E8C4B1" type="4" unique="true" autosequence="true" never_null="true" id="1">
+			<field_extra modifiable="false">
+				<editor_field_info>
+					<color red="0" green="81" blue="186" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="lastName" uuid="F610DCF6B79B4D3B83B70868B63DA63E" type="10" limiting_length="80" never_null="true" id="2"/>
+		<field name="firstName" uuid="E15AC5868D364AEBAF545E8F8A1D621C" type="10" limiting_length="80" never_null="true" id="3">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="address" uuid="6348DB3C369240AEA4FFF1DA61009BB2" type="10" never_null="true" id="4"/>
+		<field name="zipCode" uuid="7BB3D37569974DB1918EC567CD1D8C9A" type="10" limiting_length="10" never_null="true" id="6"/>
+		<field name="city" uuid="AAECB4CA131241229D7D9C790DFC1570" type="10" limiting_length="80" never_null="true" id="7"/>
+		<field name="grade" uuid="9C6479CE6B5E40EC8B9EE5EA0B2F8F10" type="10" limiting_length="30" never_null="true" id="8"/>
+		<field name="primaryTeacher" uuid="4FADB33819AB4AAC933C8E986C054B72" type="10" limiting_length="80" never_null="true" id="9"/>
+		<field name="telephone" uuid="C154C7997E044230A7778071D97BE192" type="10" limiting_length="30" never_null="true" id="10"/>
+		<field name="email" uuid="526CC55CA20A4718B01218E9D3DD5EAE" type="10" limiting_length="255" never_null="true" id="11"/>
+		<primary_key field_name="id" field_uuid="AC85F6A3EEE8403FA225E65703E8C4B1"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="12">
+				<color red="196" green="213" blue="223" alpha="255"/>
+				<coordinates left="429" top="0" width="153" height="308"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="5444A2F5EF934401B90FDED93EE1CAF0" name_Nto1="BookID_1_" name_1toN="BookID_1_" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="E978AD0F9BE84E9697D6F1D87032AA87" name="book_Id">
+				<table_ref uuid="AE032C75F3C340E1A1C2CA8011987C83" name="Loans"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="A48D32A27EC24915962F4F3CC8EDADC1" name="id">
+				<table_ref uuid="443EFB4810B94F3A9B955383AD096A90" name="Books"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_create="true" choice_field="1" entry_wildchar="false" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="F21F20CCBB1A4A30A1D7CC068FA3CA72" name_Nto1="StudentID_2_" name_1toN="StudentID_2_" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="512A0122B34149D582A593ABBD583B85" name="student_Id">
+				<table_ref uuid="AE032C75F3C340E1A1C2CA8011987C83" name="Loans"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="AC85F6A3EEE8403FA225E65703E8C4B1" name="id">
+				<table_ref uuid="5AA1916591384A999BC83C3973FF54AE" name="Students"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_create="true" choice_field="1" entry_wildchar="false" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="43BF5D232E2148A4AC66E07E7ADE3C59" type="7">
+		<field_ref uuid="9C6479CE6B5E40EC8B9EE5EA0B2F8F10" name="grade">
+			<table_ref uuid="5AA1916591384A999BC83C3973FF54AE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="4909334EC3954379BF42C2BF54669ED2" type="1">
+		<field_ref uuid="193E70B6338244538F80110F13B6342F" name="id">
+			<table_ref uuid="AE032C75F3C340E1A1C2CA8011987C83" name="Loans"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6C90D6463B554202A559D153DD87CF3E" type="7">
+		<field_ref uuid="DFBBC88656DB456EA19F546E8367DEFB" name="author">
+			<table_ref uuid="443EFB4810B94F3A9B955383AD096A90" name="Books"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="98D36C33371F40EAAEB45CDC8BB7C6D1" type="7">
+		<field_ref uuid="A48D32A27EC24915962F4F3CC8EDADC1" name="id">
+			<table_ref uuid="443EFB4810B94F3A9B955383AD096A90" name="Books"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A46FE4E302874C308F4D3C005006539E" type="7">
+		<field_ref uuid="F610DCF6B79B4D3B83B70868B63DA63E" name="lastName">
+			<table_ref uuid="5AA1916591384A999BC83C3973FF54AE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A8178B3703D0470F8C17F3D23EC7033A" type="7">
+		<field_ref uuid="E15AC5868D364AEBAF545E8F8A1D621C" name="firstName">
+			<table_ref uuid="5AA1916591384A999BC83C3973FF54AE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C60D1DB673514020B6EC8456131A8210" type="7">
+		<field_ref uuid="1E67EEF3E3E54C2E9AFDA88729F6E0D6" name="title">
+			<table_ref uuid="443EFB4810B94F3A9B955383AD096A90" name="Books"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="D5C98F083AF642B89ED1A95D35A495D9" type="7">
+		<field_ref uuid="AC85F6A3EEE8403FA225E65703E8C4B1" name="id">
+			<table_ref uuid="5AA1916591384A999BC83C3973FF54AE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DD37ABE295084135AC7D749DB44D5238" type="7">
+		<field_ref uuid="E978AD0F9BE84E9697D6F1D87032AA87" name="book_Id">
+			<table_ref uuid="AE032C75F3C340E1A1C2CA8011987C83" name="Loans"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E995B5A4381B413AB12915B1F6DB829B" type="7">
+		<field_ref uuid="512A0122B34149D582A593ABBD583B85" name="student_Id">
+			<table_ref uuid="AE032C75F3C340E1A1C2CA8011987C83" name="Loans"/>
+		</field_ref>
+	</index>
+	<base_extra data_file_path=":4D Library.4DD" source_code_stamp="1328" package_name="4D Library" structure_file_name="4D Library" __stringCompHash="icu:56.1.0" __keywordBuildingHash="icu:56.1.0" intel_code_stamp="1317" intel64_code_stamp="1317">
+		<temp_folder folder_selector="data"/>
+	</base_extra>
+</base>

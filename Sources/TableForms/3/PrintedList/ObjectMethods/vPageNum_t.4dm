@@ -1,0 +1,1 @@
+vPageNum_t:=String:C10(Printing page:C275;"- ####0 -")

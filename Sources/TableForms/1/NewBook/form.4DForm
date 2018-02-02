@@ -1,0 +1,159 @@
+﻿{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"windowMinWidth": 720,
+	"windowMinHeight": 500,
+	"windowMaxWidth": 870,
+	"windowMaxHeight": 720,
+	"width": 500,
+	"height": 400,
+	"markerBody": 486,
+	"markerBreak": 486,
+	"markerFooter": 496,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text6": {
+					"type": "text",
+					"top": 110,
+					"left": 20,
+					"width": 70,
+					"height": 16,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "By"
+				},
+				"Title": {
+					"type": "input",
+					"top": 45,
+					"left": 20,
+					"width": 460,
+					"height": 48,
+					"dataSource": "[Books:1]title:2",
+					"dataSourceTypeHint": "undefined",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 20,
+					"contextMenu": "none",
+					"placeholder": "Title",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Author": {
+					"type": "input",
+					"top": 135,
+					"left": 20,
+					"width": 460,
+					"height": 17,
+					"dataSource": "[Books:1]author:6",
+					"dataSourceTypeHint": "undefined",
+					"fontWeight": "bold",
+					"contextMenu": "none",
+					"placeholder": "Author",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Description": {
+					"type": "input",
+					"top": 255,
+					"left": 20,
+					"width": 460,
+					"height": 81,
+					"sizingY": "grow",
+					"dataSource": "[Books:1]description:3",
+					"dataSourceTypeHint": "undefined",
+					"spellcheck": true,
+					"contextMenu": "none",
+					"placeholder": "Enter a comment here…",
+					"events": []
+				},
+				"bCancel": {
+					"type": "button",
+					"top": 360,
+					"left": 280,
+					"width": 90,
+					"height": 20,
+					"sizingX": "move",
+					"tooltip": "Cancel",
+					"action": "cancel",
+					"text": "Cancel",
+					"events": [
+						"onClick"
+					]
+				},
+				"bValidate": {
+					"type": "button",
+					"top": 360,
+					"left": 390,
+					"width": 90,
+					"height": 20,
+					"sizingX": "move",
+					"tooltip": "OK",
+					"action": "accept",
+					"text": "Validate",
+					"defaultButton": true,
+					"method": "ObjectMethods/bValidate.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 20,
+					"left": 20,
+					"width": 70,
+					"height": 17,
+					"stroke": "#777777",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Title"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 170,
+					"left": 20,
+					"width": 70,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#696969",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Purchase"
+				},
+				"Purchase Date": {
+					"type": "input",
+					"top": 195,
+					"left": 20,
+					"width": 460,
+					"height": 17,
+					"sizingY": "move",
+					"dataSource": "[Books:1]purchaseDate:5",
+					"dataSourceTypeHint": "undefined",
+					"contextMenu": "none",
+					"placeholder": "Enter purchase date",
+					"dateFormat": "short",
+					"events": []
+				},
+				"Text2": {
+					"type": "text",
+					"top": 230,
+					"left": 20,
+					"width": 90,
+					"height": 17,
+					"sizingY": "move",
+					"stroke": "#696969",
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"text": "Description"
+				}
+			}
+		}
+	]
+}

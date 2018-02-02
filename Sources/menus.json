@@ -1,0 +1,116 @@
+﻿{
+	"bars": [
+		{
+			"id": 1,
+			"title": "Main",
+			"items": [
+				{
+					"link": 3430
+				},
+				{
+					"link": 7568
+				},
+				{
+					"link": 17878
+				}
+			],
+			"picture": ""
+		}
+	],
+	"menus": [
+		{
+			"link": 17878,
+			"title": ":xliff:CommonMenuMode",
+			"items": [
+				{
+					"title": ":xliff:CommonMenuItemDesign",
+					"shortcutAccel": true,
+					"shortcutKey": "Y",
+					"action": "design"
+				}
+			]
+		},
+		{
+			"link": 3430,
+			"title": ":xliff:CommonMenuFile",
+			"items": [
+				{
+					"title": "Manage Students",
+					"method": "M_ManageStudents",
+					"shortcutAccel": true,
+					"shortcutKey": "u"
+				},
+				{
+					"title": "Manage Books",
+					"method": "M_ManageBooks",
+					"shortcutAccel": true,
+					"shortcutKey": "b"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": ":xliff:CommonMenuItemQuit",
+					"method": "M_Quit",
+					"shortcutAccel": true,
+					"shortcutKey": "Q",
+					"action": "quit"
+				}
+			]
+		},
+		{
+			"link": 7568,
+			"title": ":xliff:CommonMenuEdit",
+			"items": [
+				{
+					"title": ":xliff:CommonMenuItemUndo",
+					"shortcutAccel": true,
+					"shortcutKey": "Z",
+					"action": "undo"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":xliff:CommonMenuItemCut",
+					"shortcutAccel": true,
+					"shortcutKey": "X",
+					"action": "cut"
+				},
+				{
+					"title": ":xliff:CommonMenuItemCopy",
+					"shortcutAccel": true,
+					"shortcutKey": "C",
+					"action": "copy"
+				},
+				{
+					"title": ":xliff:CommonMenuItemPaste",
+					"shortcutAccel": true,
+					"shortcutKey": "V",
+					"action": "paste"
+				},
+				{
+					"title": ":xliff:CommonMenuItemClear",
+					"action": "clear"
+				},
+				{
+					"title": ":xliff:CommonMenuItemSelectAll",
+					"shortcutAccel": true,
+					"shortcutKey": "A",
+					"action": "selectAll"
+				},
+				{
+					"title": "(-",
+					"isSeparator": true
+				},
+				{
+					"title": ":xliff:CommonMenuItemShowClipboard",
+					"action": "showClipboard"
+				}
+			]
+		}
+	]
+}

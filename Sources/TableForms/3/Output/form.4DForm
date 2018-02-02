@@ -1,0 +1,317 @@
+﻿{
+	"windowMinWidth": 720,
+	"windowMinHeight": 620,
+	"width": 720,
+	"height": 620,
+	"markerBody": 466,
+	"markerBreak": 466,
+	"markerFooter": 466,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"method": "method.4dm",
+	"pages": [
+		{
+			"objects": {
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 720,
+					"height": 90,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Gradient10.png"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 89,
+					"left": 0,
+					"width": 720,
+					"height": 1,
+					"sizingX": "grow",
+					"fill": "#888888",
+					"stroke": "transparent"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 20,
+					"left": 20,
+					"width": 50,
+					"height": 50,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Pictures/Students.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"btnAdd": {
+					"type": "button",
+					"top": 20,
+					"left": 305,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Add Student",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Add",
+					"icon": "/RESOURCES/Pictures/Buttons/NewRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnAdd.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnDelete": {
+					"type": "button",
+					"top": 20,
+					"left": 365,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Delete Selection",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Delete",
+					"icon": "/RESOURCES/Pictures/Buttons/DeleteRecord.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnDelete.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnShowAll": {
+					"type": "button",
+					"top": 20,
+					"left": 105,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Show All",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Show all",
+					"icon": "/RESOURCES/Pictures/Buttons/AllRecords.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnShowAll.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnShowSubset": {
+					"type": "button",
+					"top": 20,
+					"left": 165,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Show Subset",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Subset",
+					"icon": "/RESOURCES/Pictures/Buttons/ShowSubset.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnShowSubset.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnQuery": {
+					"type": "button",
+					"top": 20,
+					"left": 225,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Query",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Query",
+					"icon": "/RESOURCES/Pictures/Buttons/Query.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnQuery.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnLabels": {
+					"type": "button",
+					"top": 20,
+					"left": 435,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Print Labels",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Labels",
+					"icon": "/RESOURCES/Pictures/Buttons/Labels.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnLabels.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnPrint": {
+					"type": "button",
+					"top": 20,
+					"left": 495,
+					"width": 60,
+					"height": 60,
+					"tooltip": "Print Selection",
+					"textAlign": "center",
+					"stroke": "#000000",
+					"text": "Print",
+					"icon": "/RESOURCES/Pictures/Buttons/Print.png",
+					"iconFrames": 4,
+					"textPlacement": "bottom",
+					"style": "custom",
+					"method": "ObjectMethods/btnPrint.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line6": {
+					"type": "line",
+					"top": 76,
+					"left": 0,
+					"height": 46,
+					"stroke": "#A8A8A8"
+				},
+				"listBoxStudents": {
+					"type": "listbox",
+					"top": 110,
+					"left": 20,
+					"width": 680,
+					"height": 490,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"listboxType": "currentSelection",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "27px",
+					"headerHeight": "2em",
+					"highlightSet": "$highlightedStudents",
+					"table": 3,
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "#AAAAAA",
+					"verticalLineStroke": "#AAAAAA",
+					"fill": "#FFFFFF",
+					"verticalAlign": "middle",
+					"method": "ObjectMethods/listBoxStudents.4dm",
+					"events": [
+						"onDoubleClick",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Column1",
+							"dataSource": "[Students:3]lastName:2",
+							"dataSourceTypeHint": "text",
+							"automaticInsertion": true,
+							"width": 280,
+							"minWidth": 280,
+							"maxWidth": 500,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Last Name",
+								"dataSource": "<>headLastname",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column2",
+							"dataSource": "[Students:3]firstName:3",
+							"dataSourceTypeHint": "text",
+							"automaticInsertion": true,
+							"width": 280,
+							"minWidth": 280,
+							"maxWidth": 500,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "First Name",
+								"dataSource": "<>headFirstname",
+								"stroke": "#000000",
+								"verticalAlign": "middle"
+							}
+						},
+						{
+							"name": "Column3",
+							"dataSource": "[Students:3]grade:8",
+							"dataSourceTypeHint": "text",
+							"automaticInsertion": true,
+							"width": 100,
+							"minWidth": 80,
+							"maxWidth": 120,
+							"contextMenu": "none",
+							"timeFormat": "hh_mm_ss",
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Grade",
+								"dataSource": "<>headGrade",
+								"verticalAlign": "middle"
+							}
+						}
+					]
+				},
+				"Line4": {
+					"type": "line",
+					"top": 20,
+					"left": 95,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Line5": {
+					"type": "line",
+					"top": 20,
+					"left": 300,
+					"height": 60,
+					"stroke": "#999999"
+				},
+				"Line7": {
+					"type": "line",
+					"top": 20,
+					"left": 430,
+					"height": 60,
+					"stroke": "#999999"
+				}
+			}
+		}
+	]
+}
